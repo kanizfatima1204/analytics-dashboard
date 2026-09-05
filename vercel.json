@@ -1,15 +1,13 @@
 {
   "functions": {
-    "public/index.php": {
+    "api/lambda.php": {
       "runtime": "php-8.2",
       "memory": 1024,
       "includeFiles": ["vendor/**/*"]
     }
   },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/../public/index.php" }
-  ]
+    { "source": "/(.*)", "destination": "/api/lambda.php" }
+  ],
+  "regions": ["iad1"]
 }
-
-// Forward Vercel requests to the Laravel public index entrypoint
-// require __DIR__ . '/../public/index.php';
