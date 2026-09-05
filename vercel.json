@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "public/index.php": {
+      "runtime": "php-8.2",
+      "memory": 1024,
+      "includeFiles": ["vendor/**/*"]
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/public/index.php" }
+  ]
+}
